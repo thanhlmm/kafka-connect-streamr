@@ -27,5 +27,5 @@ jobs:
         run: make pack
       - uses: actions/upload-artifact@v2
         with:
-          name: artifact
+          name: kafka-connect-streamr.zip
           path: kafka-connect-streamr.zip
