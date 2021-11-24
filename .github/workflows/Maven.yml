@@ -13,7 +13,7 @@ jobs:
       with:
         java-version: '18'
         distribution: 'adopt'
-        architecture: x64
+        architecture: 'x64'
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify && make pack
     - uses: actions/upload-artifact@v2
