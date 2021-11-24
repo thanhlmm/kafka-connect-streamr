@@ -1,5 +1,5 @@
 pack:
-	mvn compile -f "/Users/thanhminh/github/kafka-streamr/my-source-connector/pom.xml"
+	mvn compile -f "./pom.xml"
 	rm -rf kafka-connect-streamr
 	rm -rf kafka-connect-streamr.zip
 	mkdir kafka-connect-streamr
@@ -12,7 +12,6 @@ build:
 
 run:
 	echo "Setting up kafka..."
-	export KAFKA_BROKER_LIST="b-2.kafka-poc-2.pb5z6m.c9.kafka.us-east-1.amazonaws.com:9094,b-1.kafka-poc-2.pb5z6m.c9.kafka.us-east-1.amazonaws.com:9094,b-3.kafka-poc-2.pb5z6m.c9.kafka.us-east-1.amazonaws.com:9094"
 
 	echo "Start kafka rest proxy and streamr conect..."
 	docker-compose -f docker-compose.yaml up -d
